@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 id: staging
 label: Staging
-folder: ../config/staging
+folder: ../config/stage
 module:
   reroute_email: 0
 theme: {  }
