@@ -44,6 +44,14 @@ function drush_policy_config_export_validate($source = NULL, $destination = NULL
 }
 ```
 
+Create split directories:
+
+```bash
+mkdir -p config/dev
+mkdir -p config/stage
+mkdir -p config/prod
+```
+
 In your settings.php update/set your config directory to:
 
 ```php
@@ -77,6 +85,11 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     $config['config_split.config_split.staging']['status'] = TRUE;
   }
 }
+else {
+  $config['config_split.config_split.production']['status'] = FALSE;
+  $config['config_split.config_split.development']['status'] = TRUE;
+  $config['config_split.config_split.staging']['status'] = FALSE;
+}
 ```
 
 If you are not on pantheon add the following to your settings.local.php file
@@ -93,6 +106,11 @@ $config['config_split.config_split.development']['status'] = FALSE;
 
 This module is only meant as a starting point. Once installed you should
 uninstall the module.
+
+```bash
+drush pm-uninstall xeno_config_split
+composer remove xenomedia/xeno_config_split
+```
 
 There may be cases that you don't need a staging and development split since
 they may be exactly the same. In that case you can just delete one of them.
