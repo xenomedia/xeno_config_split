@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+id: development
+label: Development
+folder: ../config/dev
+module:
+  field_ui: 0
+  views_ui: 0
+  stage_file_proxy: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

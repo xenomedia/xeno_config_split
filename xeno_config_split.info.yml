@@ -1,0 +1,8 @@
+name: Xeno Media Configuration Split
+type: module
+description: Creates xeno media configuration split settings
+package: Config
+
+dependencies:
+  - config_split:config_split
+  - config_ignore:config_ignore

@@ -1,0 +1,15 @@
+uuid: 230129d2-9c82-4d0a-842f-3f6acabb8b0a
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: Production
+folder: ../config/prod
+module:
+  dashboard_connector: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

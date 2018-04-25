@@ -1,0 +1,16 @@
+{
+  "name": "xenomedia/xeno_config_split",
+  "type": "drupal-module",
+  "description": "Creates xeno media configuration split settings",
+  "keywords": ["Drupal", "configuration", "configuration management"],
+  "homepage": "https://github.com/xenomedia/xeno_config_split",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/xeno_config_split/issues",
+    "source": "https://www.drupal.org/project/issues/xeno_config_split"
+  },
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/config_split": "*",
+    "drupal/config_ignore": "*"
+  }
+}
