@@ -15,6 +15,11 @@ composer require drupal/config_ignore
 composer require xenomedia/xeno_config_split
 ```
 
+Enable the modules:
+```
+drush en xeno_config_split -y
+```
+
 Create/update `drush/policy.drush.inc` file:
 
 ```php
@@ -95,13 +100,21 @@ else {
 }
 ```
 
-If you are not on pantheon add the following to your settings.local.php file
-on your production site.
+If you are not on pantheon create/udate settings.dev.php.
 
 ```php
 // Config split settings for development.
 $config['config_split.config_split.production']['status'] = TRUE;
 $config['config_split.config_split.staging']['status'] = FALSE;
+$config['config_split.config_split.development']['status'] = FALSE;
+```
+
+If you are not on pantheon create/udate settings.stage.php.
+
+```php
+// Config split settings for staging.
+$config['config_split.config_split.production']['status'] = TRUE;
+$config['config_split.config_split.staging']['status'] = TRUE;
 $config['config_split.config_split.development']['status'] = FALSE;
 ```
 
