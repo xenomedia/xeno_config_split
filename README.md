@@ -100,7 +100,7 @@ else {
 }
 ```
 
-If you are not on pantheon create/udate settings.dev.php.
+If you are not on pantheon create/update settings.dev.php.
 
 ```php
 // Config split settings for development.
@@ -109,14 +109,32 @@ $config['config_split.config_split.staging']['status'] = FALSE;
 $config['config_split.config_split.development']['status'] = FALSE;
 ```
 
-If you are not on pantheon create/udate settings.stage.php.
+If you are not on pantheon create/update settings.stage.php.
 
 ```php
 // Config split settings for staging.
-$config['config_split.config_split.production']['status'] = TRUE;
+$config['config_split.config_split.production']['status'] = FALSE;
 $config['config_split.config_split.staging']['status'] = TRUE;
 $config['config_split.config_split.development']['status'] = FALSE;
 ```
+
+If you are not on pantheon create/update settings.prod.php.
+
+```php
+// Config split settings for product.
+$config['config_split.config_split.production']['status'] = TRUE;
+$config['config_split.config_split.staging']['status'] = FALSE;
+$config['config_split.config_split.development']['status'] = FALSE;
+```
+
+Then in your local.settings.php comment/uncomment basees on the environment:
+
+```
+@include('settings.dev.php');
+# @include('settings.stage.php');
+# @include('settings.prod.php');
+```
+
 
 ## Post-installation
 
