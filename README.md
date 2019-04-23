@@ -48,8 +48,11 @@ Create split directories:
 
 ```bash
 mkdir -p config/dev
+touch config/dev/.keep
 mkdir -p config/stage
+touch config/stage/.keep
 mkdir -p config/prod
+touch config/mkdir -p config/prod/.keep
 ```
 
 In your settings.php update/set your config directory to:
