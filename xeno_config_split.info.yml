@@ -6,3 +6,4 @@ core_version_requirement: ^8.8 || ^9
 dependencies:
   - config_split:config_split
   - config_ignore:config_ignore
+  - stage_file_proxy:stage_file_proxy
